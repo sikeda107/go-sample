@@ -1,6 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+	"github.com/sikeda107/go-sample/example"
+)
 
 func hello() string {
 	return "Hello, world."
@@ -24,4 +28,7 @@ func greet(n int) string {
 func main() {
 	fmt.Println(hello())
 	fmt.Println(greet(3))
+	c := example.Calculator{A: 10, B: 20}
+	fmt.Println(c.Add1())
+	fmt.Println(c.Add2(30))
 }
