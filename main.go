@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 
+	_ "github.com/mattn/go-sqlite3"
+	"github.com/sikeda107/go-sample/db"
 	"github.com/sikeda107/go-sample/example"
 )
 
@@ -31,4 +33,5 @@ func main() {
 	c := example.Calculator{A: 10, B: 20}
 	fmt.Println(c.Add1())
 	fmt.Println(c.Add2(30))
+	db.Run()
 }
